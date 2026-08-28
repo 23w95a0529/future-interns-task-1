@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tumbler &amp; Leaf — Filter Coffee &amp; Chai House, Banjara Hills</title>
+<meta name="description" content="Neighbourhood filter coffee and chai house in Banjara Hills, Hyderabad. Fresh brews, all-day breakfast, and a place to slow down." />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="#home" class="brand">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 14h20l-2 16a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4L10 14Z" stroke="currentColor" stroke-width="2"/><path d="M30 17h2a4 4 0 0 1 0 8h-2" stroke="currentColor" stroke-width="2"/><path d="M15 8c1-2 3-2 3-4M20 8c1-2 3-2 3-4M25 8c1-2 3-2 3-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      Tumbler &amp; Leaf
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-brass" href="https://wa.me/919876543210" target="_blank" rel="noopener"><span class="long">Order on</span> WhatsApp</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero wrap" id="home">
+  <div>
+    <span class="eyebrow">Banjara Hills, Hyderabad</span>
+    <h1>Slow mornings, <em>strong</em> filter coffee.</h1>
+    <p class="sub">A neighbourhood tumbler-and-davara coffee house — fresh decoction every morning, hand-pulled chai, and a menu built around what our regulars actually order.</p>
+    <div class="hero-ctas">
+      <a href="#menu" class="btn btn-brass">View the menu</a>
+      <a href="#contact" class="btn btn-outline">Find us</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>7 AM – 10 PM</strong>Open all week</div>
+      <div><strong>Since 2019</strong>Family run</div>
+      <div><strong>4.7 ★</strong>Neighbourhood favourite</div>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <svg viewBox="0 0 320 360" width="320" height="360" xmlns="http://www.w3.org/2000/svg">
+      <!-- steam -->
+      <g stroke="#c1842c" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.75">
+        <path d="M120 40c-10 10 10 18 0 30s10 18 0 28" />
+        <path d="M150 30c-10 10 10 18 0 30s10 18 0 28" />
+      </g>
+      <!-- tumbler -->
+      <path d="M108 96h64l-8 96a14 14 0 0 1-14 12h-20a14 14 0 0 1-14-12l-8-96Z" fill="#2b1810"/>
+      <ellipse cx="140" cy="96" rx="32" ry="8" fill="#c1842c"/>
+      <!-- pour stream -->
+      <path d="M140 108c4 26 4 46 -2 62" stroke="#c1842c" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <!-- davara (bowl) -->
+      <ellipse cx="136" cy="248" rx="76" ry="20" fill="#33593c"/>
+      <path d="M64 248c0 26 32 46 72 46s72-20 72-46" fill="none" stroke="#33593c" stroke-width="6"/>
+      <ellipse cx="136" cy="242" rx="58" ry="14" fill="#efe9de" stroke="#33593c" stroke-width="3"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ MARQUEE STRIP ============ -->
+<div class="strip">
+  <div class="track">
+    <span>Filter Coffee</span><span>·</span><span>Ginger Chai</span><span>·</span><span>Rava Kesari</span><span>·</span><span>Mini Tiffin</span><span>·</span><span>Curd Rice</span><span>·</span><span>Filter Coffee</span><span>·</span><span>Ginger Chai</span><span>·</span><span>Rava Kesari</span><span>·</span><span>Mini Tiffin</span><span>·</span><span>Curd Rice</span>
+  </div>
+</div>
+
+<!-- ============ MENU ============ -->
+<section class="wrap" id="menu">
+  <div class="section-head reveal">
+    <span class="eyebrow">What we pour</span>
+    <h2>A short menu, done properly.</h2>
+    <p>We keep the list small on purpose — every item is made fresh, in small batches, through the day.</p>
+  </div>
+
+  <div class="menu-tabs">
+    <button class="menu-tab active" data-tab="coffee">Filter Coffee</button>
+    <button class="menu-tab" data-tab="chai">Chai &amp; More</button>
+    <button class="menu-tab" data-tab="tiffin">Tiffin</button>
+    <button class="menu-tab" data-tab="snacks">Snacks &amp; Sweets</button>
+  </div>
+
+  <div class="menu-panel active" id="panel-coffee">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="name">Classic Filter Kaapi<small>Fresh decoction, frothed milk</small></div><div class="price">₹60</div></div>
+      <div class="menu-item"><div class="name">Strong Black Filter<small>No milk, no sugar</small></div><div class="price">₹50</div></div>
+      <div class="menu-item"><div class="name">Cold Filter Coffee<small>Served over ice</small></div><div class="price">₹90</div></div>
+      <div class="menu-item"><div class="name">Jaggery Kaapi<small>Sweetened with jaggery, not sugar</small></div><div class="price">₹70</div></div>
+      <div class="menu-item"><div class="name">Double Tumbler<small>Two full tumblers, for sharing</small></div><div class="price">₹100</div></div>
+      <div class="menu-item"><div class="name">Dalgona Filter Coffee<small>Whipped top, house special</small><span class="tag">New</span></div><div class="price">₹120</div></div>
+    </div>
+  </div>
+
+  <div class="menu-panel" id="panel-chai">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="name">Ginger Chai<small>Hand-crushed ginger, strong brew</small></div><div class="price">₹30</div></div>
+      <div class="menu-item"><div class="name">Cardamom Chai<small>Whole elaichi, slow boiled</small></div><div class="price">₹35</div></div>
+      <div class="menu-item"><div class="name">Masala Chai<small>House spice blend</small></div><div class="price">₹35</div></div>
+      <div class="menu-item"><div class="name">Lemongrass Tea<small>Caffeine-free, garden fresh</small></div><div class="price">₹40</div></div>
+      <div class="menu-item"><div class="name">Rose Milk<small>Chilled, served in a tall glass</small></div><div class="price">₹60</div></div>
+      <div class="menu-item"><div class="name">Badam Milk<small>Warm almond milk, saffron</small></div><div class="price">₹70</div></div>
+    </div>
+  </div>
+
+  <div class="menu-panel" id="panel-tiffin">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="name">Mini Tiffin Plate<small>Idli, vada, chutney, sambar</small></div><div class="price">₹110</div></div>
+      <div class="menu-item"><div class="name">Podi Idli<small>Steamed idli tossed in gunpowder</small></div><div class="price">₹90</div></div>
+      <div class="menu-item"><div class="name">Ghee Roast Dosa<small>Crisp, served with two chutneys</small></div><div class="price">₹130</div></div>
+      <div class="menu-item"><div class="name">Curd Rice Bowl<small>Tempered, with pomegranate</small></div><div class="price">₹80</div></div>
+      <div class="menu-item"><div class="name">Upma<small>Semolina, curry leaf, peanut</small></div><div class="price">₹80</div></div>
+      <div class="menu-item"><div class="name">Pesarattu<small>Moong dal crepe, ginger chutney</small></div><div class="price">₹120</div></div>
+    </div>
+  </div>
+
+  <div class="menu-panel" id="panel-snacks">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="name">Mysore Bonda<small>Served hot, with coconut chutney</small></div><div class="price">₹70</div></div>
+      <div class="menu-item"><div class="name">Banana Chips<small>Kerala-style, thin cut</small></div><div class="price">₹50</div></div>
+      <div class="menu-item"><div class="name">Rava Kesari<small>Warm semolina sweet</small></div><div class="price">₹60</div></div>
+      <div class="menu-item"><div class="name">Mysore Pak<small>Made in-house, weekly batch</small></div><div class="price">₹70</div></div>
+      <div class="menu-item"><div class="name">Banana &amp; Jaggery Cake<small>Eggless, house recipe</small><span class="tag">New</span></div><div class="price">₹90</div></div>
+      <div class="menu-item"><div class="name">Roasted Peanut Chikki<small>Jaggery brittle</small></div><div class="price">₹40</div></div>
+    </div>
+  </div>
+
+  <div class="pour-divider"><span class="rule"></span>
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 9a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2L6 8Z" stroke="#33593c" stroke-width="1.6"/></svg>
+    <span class="rule"></span>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="photo-placeholder">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v12H4z" stroke="currentColor" stroke-width="1.5"/><path d="M4 7l8-4 8 4" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+        Photo of the counter &amp; founder<br/>goes here
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Our story</span>
+      <h2 style="font-size:32px; margin:10px 0 18px;">Started at a college canteen counter, still run the same way.</h2>
+      <p>Tumbler &amp; Leaf began in 2019 as a small counter run by the Rao family, three streets away from where the café now stands. The recipe for the decoction hasn't changed — it still takes eight hours, filtered the traditional way, every single morning before opening.</p>
+      <p>We're not trying to be a big chain. We're trying to be the place you stop at on your way to work, and the place you bring visitors when you want them to taste Hyderabad properly.</p>
+      <div class="about-values">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8l7-5 7 5M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><strong>Family run</strong><span>Three generations behind the counter</span></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><strong>Brewed fresh daily</strong><span>Nothing sits longer than a day</span></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><strong>Neighbourhood first</strong><span>Regulars get remembered, not just served</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="wrap" id="gallery">
+  <div class="section-head reveal">
+    <span class="eyebrow">Inside the café</span>
+    <h2>A peek before you visit.</h2>
+    <p>These tiles are placeholders — swap them for real photos of the counter, seating, and food once available.</p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gtile g1"><span>Counter &amp; tumblers</span></div>
+    <div class="gtile"><span>Filter pour</span></div>
+    <div class="gtile"><span>Seating corner</span></div>
+    <div class="gtile"><span>Morning tiffin</span></div>
+    <div class="gtile g4"><span>Regulars' table</span></div>
+    <div class="gtile"><span>Rava kesari</span></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What regulars say</span>
+      <h2>Word of mouth, mostly.</h2>
+    </div>
+    <div class="t-grid reveal">
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Been coming here every morning before work for two years. The coffee tastes the same every single time — that consistency is rare."</p>
+        <div class="who">— Sample review, Banjara Hills regular</div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Small menu, but everything on it is done right. The ghee roast and filter coffee combination is unbeatable."</p>
+        <div class="who">— Sample review, weekend visitor</div>
+      </div>
+      <div class="t-card">
+        <div class="stars">★★★★☆</div>
+        <p class="quote">"Feels like a proper neighbourhood spot, not a chain. Staff remembers your order after the second visit."</p>
+        <div class="who">— Sample review, first-time customer</div>
+      </div>
+    </div>
+    <p class="t-note">★ Placeholder reviews shown for layout — replace with real customer feedback (Google Reviews, Zomato, or direct quotes) before launch.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="wrap" id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Visit us</span>
+      <h2 style="font-size:32px; margin:10px 0 6px;">Find the tumblers.</h2>
+      <p style="color:var(--ink-soft); line-height:1.6;">Drop by, call ahead for a table, or message us on WhatsApp for takeaway orders.</p>
+
+      <div class="info-list">
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><strong>Address</strong><span>12-4-118, Road No. 3, Banjara Hills, Hyderabad, Telangana 500034</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.6 22 2 14.4 2 7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><strong>Call</strong><a href="tel:+919876543210">+91 98765 43210</a></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><strong>Hours</strong><span>Mon–Sun · 7:00 AM – 10:00 PM</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><strong>Email</strong><a href="mailto:hello@tumblerandleaf.in">hello@tumblerandleaf.in</a></div>
+        </div>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          src="https://maps.google.com/maps?q=Banjara%20Hills%2C%20Hyderabad&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          title="Map location — Banjara Hills, Hyderabad">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/hello@tumblerandleaf.in" method="POST">
+        <h3 style="font-size:20px; margin-bottom:18px;">Send us a message</h3>
+        <div class="form-row">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Your name" required />
+        </div>
+        <div class="form-row">
+          <label for="cf-phone">Phone or email</label>
+          <input id="cf-phone" name="contact" type="text" placeholder="How should we reach you?" required />
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Table booking, catering enquiry, feedback…" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New enquiry — Tumbler &amp; Leaf website" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <button type="submit" class="btn btn-leaf">Send message</button>
+        <p class="form-note">Sent via Formsubmit — swap the action URL for the owner's real email before launch.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 40 40" width="24" height="24" fill="none"><path d="M10 14h20l-2 16a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4L10 14Z" stroke="currentColor" stroke-width="2"/></svg>
+        Tumbler &amp; Leaf
+      </div>
+      <ul class="footer-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tumbler &amp; Leaf, Banjara Hills. All rights reserved.</span>
+      <span>Site template built for local business use.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.5.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
