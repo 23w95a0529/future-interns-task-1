@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get in touch — Studio Contact</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="public-page">
+  <div class="public-shell">
+
+    <div id="formView">
+      <div class="eyebrow">Studio Contact Form</div>
+      <h1>Let's work together</h1>
+      <p class="lead">Tell us a bit about your project. This form is a stand-in for a real client website — every submission lands straight in the Mini CRM admin dashboard.</p>
+
+      <form id="leadForm" class="card public-form">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" placeholder="98765 43210" />
+        </div>
+        <div class="field">
+          <label for="source">How did you hear about us?</label>
+          <select id="source" name="source">
+            <option value="website">Website</option>
+            <option value="instagram">Instagram</option>
+            <option value="referral">Referral</option>
+            <option value="google">Google search</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" placeholder="What are you looking to build?" required></textarea>
+        </div>
+        <p class="error-text" id="formError"></p>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Send message</button>
+      </form>
+    </div>
+
+    <div id="successView" class="card success-panel" style="display:none;">
+      <div class="check">✓</div>
+      <h1 style="font-size:20px;">Message sent</h1>
+      <p class="lead" style="margin-bottom:0;">Thanks — we'll follow up shortly. Your enquiry is already visible in the admin dashboard.</p>
+    </div>
+
+    <div class="admin-link">Managing leads? <a href="login.html">Go to admin login →</a></div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+  const form = document.getElementById('leadForm');
+  const errorEl = document.getElementById('formError');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.textContent = '';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    const payload = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      source: document.getElementById('source').value,
+      message: document.getElementById('message').value
+    };
+
+    try {
+      await apiRequest('/leads/public', { method: 'POST', body: payload });
+      document.getElementById('formView').style.display = 'none';
+      document.getElementById('successView').style.display = 'block';
+    } catch (err) {
+      errorEl.textContent = err.message;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
+  });
+</script>
+</body>
+</html>

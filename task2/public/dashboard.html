@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Mini CRM</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="wordmark">Mini<span>CRM</span></div>
+    <div class="tagline">Lead management</div>
+
+    <div class="nav-item active">◆ Leads</div>
+
+    <div class="spacer"></div>
+    <div class="user-box" id="userBox"></div>
+    <button class="btn btn-ghost" id="logoutBtn" style="width:100%;">Log out</button>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <div>
+        <h1>Leads</h1>
+        <p>Every enquiry from the contact form, in one pipeline.</p>
+      </div>
+      <a href="index.html" target="_blank" class="btn btn-ghost">↗ View contact form</a>
+    </div>
+
+    <section class="stat-grid" id="statGrid">
+      <div class="card stat-card">
+        <div class="label">Total leads</div>
+        <div class="value" id="statTotal">–</div>
+      </div>
+      <div class="card stat-card new">
+        <div class="label">New</div>
+        <div class="value" id="statNew">–</div>
+      </div>
+      <div class="card stat-card contacted">
+        <div class="label">Contacted</div>
+        <div class="value" id="statContacted">–</div>
+      </div>
+      <div class="card stat-card converted">
+        <div class="label">Converted</div>
+        <div class="value" id="statConverted">–</div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <input type="text" id="searchInput" placeholder="Search by name, email, or source…" />
+      <select id="statusFilter">
+        <option value="">All statuses</option>
+        <option value="new">New</option>
+        <option value="contacted">Contacted</option>
+        <option value="converted">Converted</option>
+      </select>
+    </div>
+
+    <div class="card" style="overflow-x:auto;">
+      <table class="lead-table" id="leadTable">
+        <thead>
+          <tr>
+            <th>Lead</th>
+            <th>Source</th>
+            <th>Pipeline</th>
+            <th>Status</th>
+            <th>Received</th>
+          </tr>
+        </thead>
+        <tbody id="leadTableBody"></tbody>
+      </table>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <div class="glyph">◇</div>
+        <div>No leads match these filters yet.</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Lead detail drawer -->
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <button class="close-btn" id="closeDrawer">✕</button>
+    <h2 id="drawerName">—</h2>
+    <span class="status-badge" id="drawerStatusBadge"></span>
+  </div>
+  <div class="drawer-body">
+    <div class="drawer-section">
+      <h3>Contact</h3>
+      <div class="detail-row"><span class="k">Email</span><span id="drawerEmail" style="font-family:var(--font-mono); font-size:13px;"></span></div>
+      <div class="detail-row"><span class="k">Phone</span><span id="drawerPhone"></span></div>
+      <div class="detail-row"><span class="k">Source</span><span id="drawerSource"></span></div>
+      <div class="detail-row"><span class="k">Received</span><span id="drawerCreated"></span></div>
+    </div>
+
+    <div class="drawer-section" id="drawerMessageSection">
+      <h3>Message</h3>
+      <p id="drawerMessage" style="font-size:14px; line-height:1.5; margin:0;"></p>
+    </div>
+
+    <div class="drawer-section">
+      <h3>Update status</h3>
+      <div class="status-actions" id="statusActions">
+        <button data-status="new">New</button>
+        <button data-status="contacted">Contacted</button>
+        <button data-status="converted">Converted</button>
+      </div>
+    </div>
+
+    <div class="drawer-section">
+      <h3>Follow-up notes</h3>
+      <div id="notesList"></div>
+      <form id="noteForm" class="note-form">
+        <textarea id="noteText" rows="2" placeholder="Log a call, email, or next step…" required></textarea>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+  <div class="drawer-footer">
+    <button class="btn btn-danger" id="deleteLeadBtn" style="width:100%;">Delete lead</button>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

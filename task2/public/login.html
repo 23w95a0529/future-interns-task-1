@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Login — Mini CRM</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-shell">
+    <div class="login-wordmark">Mini&nbsp;CRM · Admin</div>
+    <form id="loginForm" class="card login-card">
+      <h1>Sign in</h1>
+      <p class="sub">Only admins can view and manage leads.</p>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" autocomplete="username" required />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required />
+      </div>
+      <p class="error-text" id="loginError"></p>
+      <button type="submit" class="btn btn-primary" id="loginBtn">Sign in</button>
+
+      <div class="login-hint">
+        First run? Default credentials come from .env<br/>
+        (ADMIN_USERNAME / ADMIN_PASSWORD)
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script>
+  // Already logged in? skip straight to the dashboard.
+  if (getToken()) window.location.href = 'dashboard.html';
+
+  const form = document.getElementById('loginForm');
+  const errorEl = document.getElementById('loginError');
+  const btn = document.getElementById('loginBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.textContent = '';
+    btn.disabled = true;
+    btn.textContent = 'Signing in…';
+
+    try {
+      const data = await apiRequest('/auth/login', {
+        method: 'POST',
+        body: {
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        }
+      });
+      setSession(data.token, data.username);
+      window.location.href = 'dashboard.html';
+    } catch (err) {
+      errorEl.textContent = err.message;
+      btn.disabled = false;
+      btn.textContent = 'Sign in';
+    }
+  });
+</script>
+</body>
+</html>
